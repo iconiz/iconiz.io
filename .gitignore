@@ -2,4 +2,9 @@
 node_modules
 
 # lol macs
-.DS_Store/
+.DS_Store
+.user.ini
+
+.well-known
+.htaccess
+
