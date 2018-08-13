@@ -41,7 +41,7 @@ $(function() {
 											"</div>"+
 										"</div>"+
 									"</div>"+
-									"<img class='c-overlay-object img-responsive' id='memberpic"+i+"' alt='"+item.name_Chn+"'>"+
+									"<img src='assets/img/loading.gif' class='c-overlay-object img-responsive' id='memberpic"+i+"' alt='"+item.name_Chn+"'>"+
 								"</div>"+
 								"<div class='c-body'>"+
 									"<div class='c-head clearfix'>"+
@@ -70,6 +70,9 @@ $(function() {
 						dataType:'json',
 						success : function(json) {
 							$("#memberpic"+i).attr("src",'data:image/jpeg;base64,' + json.result.profilePicture);
+							if (item.marginTop != 0) {
+								$("#memberpic"+i).attr("style",'top:-'+item.marginTop+'px;');
+							}
 						}});
 					});
 				},
